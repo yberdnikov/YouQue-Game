@@ -85,6 +85,9 @@
 		6E7156B0180575EF00C5CCB7 /* PersistentStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E7156AF180575EF00C5CCB7 /* PersistentStore.m */; };
 		6E7156B41805761600C5CCB7 /* GameEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E7156B31805761600C5CCB7 /* GameEntity.m */; };
 		6E7FD1351813CF92004EDD86 /* ScoreEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E7FD1341813CF92004EDD86 /* ScoreEntity.m */; };
+		6E8EDBFE1829AD65002CB466 /* LevelProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E8EDBFD1829AD65002CB466 /* LevelProvider.m */; };
+		6E8EDC021829ADA3002CB466 /* LevelEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E8EDC011829ADA3002CB466 /* LevelEntity.m */; };
+		6E8EDC061829B035002CB466 /* LevelGauge.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E8EDC051829B035002CB466 /* LevelGauge.m */; };
 		6E9745BE1817FF1000EF34A4 /* objective.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E9745BD1817FF1000EF34A4 /* objective.png */; };
 		6E9745C01818044000EF34A4 /* selection.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E9745BF1818044000EF34A4 /* selection.png */; };
 		6E9745C21818088E00EF34A4 /* new cells.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E9745C11818088D00EF34A4 /* new cells.png */; };
@@ -206,6 +209,12 @@
 		6E7156B31805761600C5CCB7 /* GameEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameEntity.m; sourceTree = "<group>"; };
 		6E7FD1331813CF92004EDD86 /* ScoreEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScoreEntity.h; sourceTree = "<group>"; };
 		6E7FD1341813CF92004EDD86 /* ScoreEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScoreEntity.m; sourceTree = "<group>"; };
+		6E8EDBFC1829AD65002CB466 /* LevelProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelProvider.h; sourceTree = "<group>"; };
+		6E8EDBFD1829AD65002CB466 /* LevelProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelProvider.m; sourceTree = "<group>"; };
+		6E8EDC001829ADA3002CB466 /* LevelEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelEntity.h; sourceTree = "<group>"; };
+		6E8EDC011829ADA3002CB466 /* LevelEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelEntity.m; sourceTree = "<group>"; };
+		6E8EDC041829B035002CB466 /* LevelGauge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelGauge.h; sourceTree = "<group>"; };
+		6E8EDC051829B035002CB466 /* LevelGauge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelGauge.m; sourceTree = "<group>"; };
 		6E9745BD1817FF1000EF34A4 /* objective.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = objective.png; sourceTree = "<group>"; };
 		6E9745BF1818044000EF34A4 /* selection.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = selection.png; sourceTree = "<group>"; };
 		6E9745C11818088D00EF34A4 /* new cells.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "new cells.png"; sourceTree = "<group>"; };
@@ -320,6 +329,7 @@
 		6E15D97517735850009DC20F /* HelperClasses */ = {
 			isa = PBXGroup;
 			children = (
+				6E8EDBFB1829AD4E002CB466 /* LevelProvider */,
 				6E1B877A1819675500A08402 /* UndoManager */,
 				6E7156AD180575C500C5CCB7 /* PersistentStore */,
 				6E7156AC18056F7400C5CCB7 /* FastestPathFinder */,
@@ -608,6 +618,35 @@
 			name = ScoreEntity;
 			sourceTree = "<group>";
 		};
+		6E8EDBFB1829AD4E002CB466 /* LevelProvider */ = {
+			isa = PBXGroup;
+			children = (
+				6E8EDC031829B021002CB466 /* LevelGauge */,
+				6E8EDBFF1829AD8E002CB466 /* LevelEntity */,
+				6E8EDBFC1829AD65002CB466 /* LevelProvider.h */,
+				6E8EDBFD1829AD65002CB466 /* LevelProvider.m */,
+			);
+			name = LevelProvider;
+			sourceTree = "<group>";
+		};
+		6E8EDBFF1829AD8E002CB466 /* LevelEntity */ = {
+			isa = PBXGroup;
+			children = (
+				6E8EDC001829ADA3002CB466 /* LevelEntity.h */,
+				6E8EDC011829ADA3002CB466 /* LevelEntity.m */,
+			);
+			name = LevelEntity;
+			sourceTree = "<group>";
+		};
+		6E8EDC031829B021002CB466 /* LevelGauge */ = {
+			isa = PBXGroup;
+			children = (
+				6E8EDC041829B035002CB466 /* LevelGauge.h */,
+				6E8EDC051829B035002CB466 /* LevelGauge.m */,
+			);
+			name = LevelGauge;
+			sourceTree = "<group>";
+		};
 		6E9745BC1817FE9400EF34A4 /* How to play images */ = {
 			isa = PBXGroup;
 			children = (
@@ -804,6 +843,7 @@
 				6E15D95217735813009DC20F /* Connect5ViewController.m in Sources */,
 				6E15D96E1773584B009DC20F /* CellView.m in Sources */,
 				6E5E6A3F1801CC1500716A6B /* MainMenuViewController.m in Sources */,
+				6E8EDC061829B035002CB466 /* LevelGauge.m in Sources */,
 				6E15D96F1773584B009DC20F /* FastestPathFinder.m in Sources */,
 				6E15D9701773584B009DC20F /* MJDijkstra.m in Sources */,
 				6E15D9711773584B009DC20F /* MJPriorityDictionary.mm in Sources */,
@@ -815,12 +855,14 @@
 				6E7156B0180575EF00C5CCB7 /* PersistentStore.m in Sources */,
 				6E15D9741773584B009DC20F /* MSize.m in Sources */,
 				6E3B2AB51829993A0062C1B0 /* SSDrawingUtilities.m in Sources */,
+				6E8EDBFE1829AD65002CB466 /* LevelProvider.m in Sources */,
 				6E47605318183C5600DD79A2 /* HexColor.m in Sources */,
 				6E47603C18183AB500DD79A2 /* TSMessage.m in Sources */,
 				6E2CA66B177466F300918B5A /* GraphCell.m in Sources */,
 				6E1B877918195D7800A08402 /* SIAlertView.m in Sources */,
 				6E2CA66E1774685700918B5A /* Graph.m in Sources */,
 				6E0A1AA01816FC610097486A /* MYIntroductionPanel.m in Sources */,
+				6E8EDC021829ADA3002CB466 /* LevelEntity.m in Sources */,
 				6EA480F91774901500A7DA12 /* ConnectedCellsDetector.m in Sources */,
 				6EE3B01A1775DFC3009B823A /* RandomUnOccupiedCellsGenerator.m in Sources */,
 			);
@@ -922,7 +964,7 @@
 				INFOPLIST_FILE = "Connect5/Connect5-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = YouQue;
-				PROVISIONING_PROFILE = "D3EE6DB8-FBA8-4805-9D6E-A6FD556EC34A";
+				PROVISIONING_PROFILE = "382EF02B-81FC-4B7A-9374-B2B4D58149EB";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -938,7 +980,7 @@
 				INFOPLIST_FILE = "Connect5/Connect5-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = YouQue;
-				PROVISIONING_PROFILE = "D3EE6DB8-FBA8-4805-9D6E-A6FD556EC34A";
+				PROVISIONING_PROFILE = "382EF02B-81FC-4B7A-9374-B2B4D58149EB";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};

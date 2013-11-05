@@ -52,7 +52,8 @@
             currentGame.nextCellsToAdd = [NSArray array];
         }
         
-        
+        levelProvider = [[LevelProvider alloc] initWithNumberOfLevels:2];
+        levelProvider.delegate = self;
         
         self.SelectedPath = [NSMutableArray array];
         
@@ -66,6 +67,10 @@
         
     }
     return self;
+}
+-(void)levelProvider:(LevelProvider *)levelProvider LevelChanged:(LevelEntity *)newLevel
+{
+    
 }
 -(void)saveGame
 {
@@ -123,6 +128,7 @@
 
 -(void)ReloadNewGame
 {
+    [levelProvider ResetLevel];
     [_UndoManager ResetManager];
     _UndoBtn.enabled = NO;
     [currentGame.score ResetScore];
@@ -693,7 +699,7 @@
 {
     
 
-    
+    [levelProvider ReportScore:currentGame.score.score];
     [self SetScoreInScoreBoard:currentGame.score.score];
     if([_delegate respondsToSelector:@selector(setProgress:withLevelNumber:)])
     {
