@@ -9,12 +9,18 @@
 #import <UIKit/UIKit.h>
 #import "MatrixView.h"
 #import "SIAlertView.h"
+#import "SSPieProgressView.h"
 @interface Connect5ViewController : UIViewController<UIAlertViewDelegate,MatrixViewDelegate>
 {
     IBOutlet UIButton *okBtn;
     IBOutlet UIButton *CancelBtn;
     IBOutlet UILabel *ScoreBoard;
     IBOutlet UIButton *UndoBtn;
+    IBOutlet UILabel *LevelLbl;
+    CellView *FirstNextCell;
+    CellView *SecondNextCell;
+    CellView *thirdNextCell;
+    IBOutlet SSPieProgressView *progressView;
 }
 @property(nonatomic,retain)GameEntity *ResumedGame;
 @property(nonatomic,assign)BOOL IsResumedGame;

@@ -7,8 +7,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Connect5ViewController">
             <connections>
-                <outlet property="ScoreBoard" destination="SQ4-ce-3Zq" id="rGD-BD-P3e"/>
+                <outlet property="LevelLbl" destination="O6N-ta-IUI" id="YAT-iS-HDh"/>
+                <outlet property="ScoreBoard" destination="SQ4-ce-3Zq" id="mV7-Sp-wZ3"/>
                 <outlet property="UndoBtn" destination="d61-6D-rWQ" id="bZc-BJ-uWn"/>
+                <outlet property="progressView" destination="sHT-YW-aFP" id="1ip-8y-blY"/>
                 <outlet property="view" destination="6" id="7"/>
             </connections>
         </placeholder>
@@ -55,6 +57,20 @@
                         <action selector="UndoAction:" destination="-1" eventType="touchUpInside" id="c4m-ms-kNt"/>
                     </connections>
                 </button>
+                <view contentMode="scaleToFill" id="sHT-YW-aFP" customClass="SSPieProgressView">
+                    <rect key="frame" x="244" y="57" width="65" height="65"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="O6N-ta-IUI">
+                            <rect key="frame" x="2" y="20" width="60" height="26"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                </view>
             </subviews>
             <color key="backgroundColor" red="0.041491833868123752" green="0.68889072593305034" blue="0.8589564732142857" alpha="1" colorSpace="calibratedRGB"/>
         </view>

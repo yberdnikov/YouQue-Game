@@ -52,28 +52,28 @@
     int xOffset = 80;
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone)
     {
-        y =330;
+        y = -10;
         xOffset = 0;
     }
     int cellSize = CELL_SIZE;
     
-    CellView *FirstNextCell = [[CellView alloc] initWithFrame:CGRectMake(20+xOffset, y , 0, 0)];
+    FirstNextCell = [[CellView alloc] initWithFrame:CGRectMake(20+xOffset, y , 0, 0)];
     FirstNextCell.tag = 4001;
     [gameContainerView addSubview:FirstNextCell];
     
-    _matrix.FirstNextCell = FirstNextCell;
+    //_matrix.FirstNextCell = FirstNextCell;
     
-    CellView *SecondNextCell = [[CellView alloc] initWithFrame:CGRectMake(20+cellSize+10+xOffset, y , 0, 0)];
+    SecondNextCell = [[CellView alloc] initWithFrame:CGRectMake(20+cellSize+10+xOffset, y , 0, 0)];
     SecondNextCell.tag = 4002;
     [gameContainerView addSubview:SecondNextCell];
     
-    _matrix.SecondNextCell = SecondNextCell;
+    //_matrix.SecondNextCell = SecondNextCell;
     
-    CellView *thirdNextCell = [[CellView alloc] initWithFrame:CGRectMake(20+2*(cellSize+10)+xOffset, y , 0, 0)];
+    thirdNextCell = [[CellView alloc] initWithFrame:CGRectMake(20+2*(cellSize+10)+xOffset, y , 0, 0)];
     thirdNextCell.tag = 4003;
     [gameContainerView addSubview:thirdNextCell];
     
-    _matrix.thirdNextCell = thirdNextCell;
+    //_matrix.thirdNextCell = thirdNextCell;
     
     _matrix.UndoBtn = UndoBtn;
     
@@ -83,13 +83,17 @@
     CancelBtn.enabled = NO;
     okBtn.enabled = NO;
     [okBtn addTarget:_matrix action:@selector(OKAction:) forControlEvents:UIControlEventTouchUpInside];
-    _matrix.CancelBtn = CancelBtn;
-    _matrix.OKBtn = okBtn;
+    //_matrix.CancelBtn = CancelBtn;
+    //_matrix.OKBtn = okBtn;
     
     
 
+    progressView.pieFillColor = [UIColor colorWithRed:(57.0f/255.0f) green:(57.0f/255.0f) blue:(57.0f/255.0f) alpha:1.0];
+    progressView.pieBorderColor = [UIColor whiteColor];
+    progressView.pieBackgroundColor = [UIColor colorWithRed:(157.0f/255.0f) green:(157.0f/255.0f) blue:(157.0f/255.0f) alpha:1.0];
+    //[progressView setProgress:0.6];
     
-    
+    //LevelLbl.text = @"Level 1";
     
 }
 - (void)didReceiveMemoryWarning
@@ -100,6 +104,17 @@
 -(void)MatrixViewQuit:(MatrixView *)matrixView
 {
     [self.navigationController popViewControllerAnimated:YES];
+}
+-(void)AddNextCellsWithGraphCells:(NSArray *)GCells
+{
+    [FirstNextCell SetStatusWithGraphCell:[GCells objectAtIndex:0] Animatation:CellAnimationTypeNone];
+    [SecondNextCell SetStatusWithGraphCell:[GCells objectAtIndex:1] Animatation:CellAnimationTypeNone];
+    [thirdNextCell SetStatusWithGraphCell:[GCells objectAtIndex:2] Animatation:CellAnimationTypeNone];
+}
+-(void)setProgress:(CGFloat)progress withLevelNumber:(int)levelNo
+{
+    [progressView setProgress:progress];
+    LevelLbl.text = [NSString stringWithFormat:@"Level %d",levelNo];
 }
 -(IBAction)QuitAction:(id)sender
 {
@@ -116,11 +131,7 @@
                              type:SIAlertViewButtonTypeDefault
                           handler:^(SIAlertView *alert) {
                               
-                              GraphCell *emptyCell = [[GraphCell alloc] init];
-                              emptyCell.color = unOccupied;
-                              [_matrix.FirstNextCell SetStatusWithGraphCell:emptyCell Animatation:CellAnimationTypeNone];
-                              [_matrix.SecondNextCell SetStatusWithGraphCell:emptyCell Animatation:CellAnimationTypeNone];
-                              [_matrix.thirdNextCell SetStatusWithGraphCell:emptyCell Animatation:CellAnimationTypeNone];
+                              [self ResetNextCells];
                               [_matrix ReloadNewGame];
                           }];
     [alertView addButtonWithTitle:@"Cancel"
@@ -144,15 +155,19 @@
             break;
         default:
         {
-            GraphCell *emptyCell = [[GraphCell alloc] init];
-            emptyCell.color = unOccupied;
-            [_matrix.FirstNextCell SetStatusWithGraphCell:emptyCell Animatation:CellAnimationTypeNone];
-            [_matrix.SecondNextCell SetStatusWithGraphCell:emptyCell Animatation:CellAnimationTypeNone];
-            [_matrix.thirdNextCell SetStatusWithGraphCell:emptyCell Animatation:CellAnimationTypeNone];
+            [self ResetNextCells];
             [_matrix ReloadNewGame];
         }
             break;
     }
+}
+-(void)ResetNextCells
+{
+    GraphCell *emptyCell = [[GraphCell alloc] init];
+    emptyCell.color = unOccupied;
+    [FirstNextCell SetStatusWithGraphCell:emptyCell Animatation:CellAnimationTypeNone];
+    [SecondNextCell SetStatusWithGraphCell:emptyCell Animatation:CellAnimationTypeNone];
+    [thirdNextCell SetStatusWithGraphCell:emptyCell Animatation:CellAnimationTypeNone];
 }
 -(void)Quit
 {
@@ -165,6 +180,7 @@
 }
 -(void)reloadGame:(GameEntity *)game
 {
+    
     [_matrix ReloadGame:game];
 }
 -(void)viewWillAppear:(BOOL)animated
@@ -176,10 +192,17 @@
     }
     
 }
+-(void)ResetProgressAndLevel
+{
+    [self setProgress:0.0f withLevelNumber:1];
+}
 -(void)ReloadNewGame
 {
+    [self ResetProgressAndLevel];
+    [self ResetNextCells];
     [_matrix ResetUndo];
     [_matrix ReloadNewGame];
+    
 }
 -(void)dealloc
 {

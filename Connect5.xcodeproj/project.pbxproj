@@ -47,6 +47,8 @@
 		6E1E3DF7180AF54800903B3C /* icon_1024.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E1E3DEA180AF54800903B3C /* icon_1024.png */; };
 		6E2CA66B177466F300918B5A /* GraphCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E2CA66A177466F300918B5A /* GraphCell.m */; };
 		6E2CA66E1774685700918B5A /* Graph.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E2CA66D1774685700918B5A /* Graph.m */; };
+		6E3B2AB2182999150062C1B0 /* SSPieProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E3B2AB1182999150062C1B0 /* SSPieProgressView.m */; };
+		6E3B2AB51829993A0062C1B0 /* SSDrawingUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E3B2AB41829993A0062C1B0 /* SSDrawingUtilities.m */; };
 		6E47603C18183AB500DD79A2 /* TSMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E47602318183AB500DD79A2 /* TSMessage.m */; };
 		6E47603D18183AB500DD79A2 /* NotificationBackgroundError.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E47602618183AB500DD79A2 /* NotificationBackgroundError.png */; };
 		6E47603E18183AB500DD79A2 /* NotificationBackgroundError@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E47602718183AB500DD79A2 /* NotificationBackgroundError@2x.png */; };
@@ -155,6 +157,10 @@
 		6E2CA66A177466F300918B5A /* GraphCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphCell.m; sourceTree = "<group>"; };
 		6E2CA66C1774685700918B5A /* Graph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Graph.h; sourceTree = "<group>"; };
 		6E2CA66D1774685700918B5A /* Graph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Graph.m; sourceTree = "<group>"; };
+		6E3B2AB0182999150062C1B0 /* SSPieProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSPieProgressView.h; sourceTree = "<group>"; };
+		6E3B2AB1182999150062C1B0 /* SSPieProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSPieProgressView.m; sourceTree = "<group>"; };
+		6E3B2AB31829993A0062C1B0 /* SSDrawingUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSDrawingUtilities.h; sourceTree = "<group>"; };
+		6E3B2AB41829993A0062C1B0 /* SSDrawingUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSDrawingUtilities.m; sourceTree = "<group>"; };
 		6E47602218183AB500DD79A2 /* TSMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSMessage.h; sourceTree = "<group>"; };
 		6E47602318183AB500DD79A2 /* TSMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSMessage.m; sourceTree = "<group>"; };
 		6E47602618183AB500DD79A2 /* NotificationBackgroundError.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NotificationBackgroundError.png; sourceTree = "<group>"; };
@@ -326,6 +332,7 @@
 		6E15D97617735864009DC20F /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
+				6E3B2AAF182998D80062C1B0 /* PieProgressView */,
 				6E1B877418195D7700A08402 /* SIAlertView */,
 				6E47601D18183A9400DD79A2 /* Notification View */,
 				6E0A1A9B1816FC330097486A /* IntroductionView */,
@@ -445,6 +452,17 @@
 				6E15D95617735813009DC20F /* Connect5ViewController_iPad.xib */,
 			);
 			name = GameViewController;
+			sourceTree = "<group>";
+		};
+		6E3B2AAF182998D80062C1B0 /* PieProgressView */ = {
+			isa = PBXGroup;
+			children = (
+				6E3B2AB31829993A0062C1B0 /* SSDrawingUtilities.h */,
+				6E3B2AB41829993A0062C1B0 /* SSDrawingUtilities.m */,
+				6E3B2AB0182999150062C1B0 /* SSPieProgressView.h */,
+				6E3B2AB1182999150062C1B0 /* SSPieProgressView.m */,
+			);
+			name = PieProgressView;
 			sourceTree = "<group>";
 		};
 		6E47601D18183A9400DD79A2 /* Notification View */ = {
@@ -776,6 +794,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E0A1AA11816FC610097486A /* MYIntroductionView.m in Sources */,
+				6E3B2AB2182999150062C1B0 /* SSPieProgressView.m in Sources */,
 				6E15D94517735813009DC20F /* main.m in Sources */,
 				6E7FD1351813CF92004EDD86 /* ScoreEntity.m in Sources */,
 				6E47604E18183AB500DD79A2 /* TSBlurView.m in Sources */,
@@ -795,6 +814,7 @@
 				6E15D9731773584B009DC20F /* MatrixView.m in Sources */,
 				6E7156B0180575EF00C5CCB7 /* PersistentStore.m in Sources */,
 				6E15D9741773584B009DC20F /* MSize.m in Sources */,
+				6E3B2AB51829993A0062C1B0 /* SSDrawingUtilities.m in Sources */,
 				6E47605318183C5600DD79A2 /* HexColor.m in Sources */,
 				6E47603C18183AB500DD79A2 /* TSMessage.m in Sources */,
 				6E2CA66B177466F300918B5A /* GraphCell.m in Sources */,

@@ -41,11 +41,11 @@ typedef void(^UndoBlock)(NSArray* lastAddedCells,NSArray *lastRemovedCells,NSNum
 }
 //UI Controls
 @property(nonatomic,retain)UIButton *UndoBtn;
-@property(nonatomic,retain)CellView *FirstNextCell;
-@property(nonatomic,retain)CellView *SecondNextCell;
-@property(nonatomic,retain)CellView *thirdNextCell;
-@property(nonatomic,retain)UIButton *CancelBtn;
-@property(nonatomic,retain)UIButton *OKBtn;
+//@property(nonatomic,retain)CellView *FirstNextCell;
+//@property(nonatomic,retain)CellView *SecondNextCell;
+//@property(nonatomic,retain)CellView *thirdNextCell;
+//@property(nonatomic,retain)UIButton *CancelBtn;
+//@property(nonatomic,retain)UIButton *OKBtn;
 @property(nonatomic,retain)UILabel *ScoreBoard;
 
 
@@ -69,5 +69,6 @@ typedef void(^UndoBlock)(NSArray* lastAddedCells,NSArray *lastRemovedCells,NSNum
 @protocol MatrixViewDelegate <NSObject>
 
 -(void)MatrixViewQuit:(MatrixView*)matrixView;
-
+-(void)AddNextCellsWithGraphCells:(NSArray*)GCells;
+-(void)setProgress:(CGFloat)progress withLevelNumber:(int)levelNo;
 @end

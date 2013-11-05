@@ -134,7 +134,7 @@
 {
     currentGame = game;
     
-    self.ScoreBoard.text = [NSString stringWithFormat:@"%d",currentGame.score.score];
+    [self UpdateScore];
     
     [self ReloadWithSize:currentGame.graph.size gameResumed:YES];
 }
@@ -154,7 +154,7 @@
     self.frame = CGRectMake(0, 0, (CELL_SIZE*size.width)+20, (CELL_SIZE*size.height)+20);
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone)
     {
-        self.center = CGPointMake(160, 160);
+        self.center = CGPointMake(160, 210);
     }else
     {
         self.center = CGPointMake(350, 250);
@@ -294,9 +294,11 @@
 }
 -(void)AddNextCellsToSuperView
 {
-    [_FirstNextCell SetStatusWithGraphCell:[currentGame.nextCellsToAdd objectAtIndex:0] Animatation:CellAnimationTypeNone];
-    [_SecondNextCell SetStatusWithGraphCell:[currentGame.nextCellsToAdd objectAtIndex:1] Animatation:CellAnimationTypeNone];
-    [_thirdNextCell SetStatusWithGraphCell:[currentGame.nextCellsToAdd objectAtIndex:2] Animatation:CellAnimationTypeNone];
+    if([_delegate respondsToSelector:@selector(AddNextCellsWithGraphCells:)])
+    {
+        [_delegate AddNextCellsWithGraphCells:currentGame.nextCellsToAdd];
+    }
+    
 }
 
 
@@ -456,7 +458,7 @@
             {
                 [self showBannerWithMessage:@"Can't go there !" withTitle:@"Sorry"];
             }
-            _OKBtn.enabled = self.SelectedPath.count>0;
+           // _OKBtn.enabled = self.SelectedPath.count>0;
             [self OKAction:nil];
         
         }];
@@ -540,8 +542,8 @@
     _startCellIndex = nil;
     
     [fromCell cellUnTouched];
-    _OKBtn.enabled = NO;
-    _CancelBtn.enabled = NO;
+    //_OKBtn.enabled = NO;
+    //_CancelBtn.enabled = NO;
     
 }
 -(void)CancelAction:(UIButton *)sender
@@ -693,6 +695,11 @@
 
     
     [self SetScoreInScoreBoard:currentGame.score.score];
+    if([_delegate respondsToSelector:@selector(setProgress:withLevelNumber:)])
+    {
+        CGFloat progress = currentGame.score.score/1000.0f;
+        [_delegate setProgress:progress withLevelNumber:1];
+    }
 }
 -(CellView*)getCellViewWithIndex:(int)index
 {
