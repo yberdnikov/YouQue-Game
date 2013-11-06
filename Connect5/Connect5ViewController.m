@@ -50,30 +50,21 @@
     
     int y = 480;
     int xOffset = 80;
+    int padding = 2;
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone)
     {
         y = -10;
-        xOffset = 0;
+        xOffset = -15;
     }
     int cellSize = CELL_SIZE;
     
-    FirstNextCell = [[CellView alloc] initWithFrame:CGRectMake(20+xOffset, y , 0, 0)];
-    FirstNextCell.tag = 4001;
-    [gameContainerView addSubview:FirstNextCell];
+    for(int i = 0;i<MAX_NUMBER_OF_ADDED_CELLS;i++)
+    {
+        CellView *cell = [[CellView alloc] initWithFrame:CGRectMake(20+i*(cellSize+padding)+xOffset, y , 0, 0)];
+        cell.tag = 4000+i;
+        [gameContainerView addSubview:cell];
+    }
     
-    //_matrix.FirstNextCell = FirstNextCell;
-    
-    SecondNextCell = [[CellView alloc] initWithFrame:CGRectMake(20+cellSize+10+xOffset, y , 0, 0)];
-    SecondNextCell.tag = 4002;
-    [gameContainerView addSubview:SecondNextCell];
-    
-    //_matrix.SecondNextCell = SecondNextCell;
-    
-    thirdNextCell = [[CellView alloc] initWithFrame:CGRectMake(20+2*(cellSize+10)+xOffset, y , 0, 0)];
-    thirdNextCell.tag = 4003;
-    [gameContainerView addSubview:thirdNextCell];
-    
-    //_matrix.thirdNextCell = thirdNextCell;
     
     _matrix.UndoBtn = UndoBtn;
     
@@ -107,9 +98,22 @@
 }
 -(void)AddNextCellsWithGraphCells:(NSArray *)GCells
 {
-    [FirstNextCell SetStatusWithGraphCell:[GCells objectAtIndex:0] Animatation:CellAnimationTypeNone];
+    for(int i =0 ;i<MAX_NUMBER_OF_ADDED_CELLS;i++)
+    {
+        CellView *cell = ((CellView*)[self.view viewWithTag:4000+i]);
+        if(i<GCells.count)
+        {
+            [cell SetStatusWithGraphCell:[GCells objectAtIndex:i] Animatation:CellAnimationTypeNone];
+        }else
+        {
+            GraphCell *emptyCell = [[GraphCell alloc] init];
+            emptyCell.color = unOccupied;
+            [cell SetStatusWithGraphCell:emptyCell Animatation:CellAnimationTypeNone];
+        }
+    }
+    /*[FirstNextCell SetStatusWithGraphCell:[GCells objectAtIndex:0] Animatation:CellAnimationTypeNone];
     [SecondNextCell SetStatusWithGraphCell:[GCells objectAtIndex:1] Animatation:CellAnimationTypeNone];
-    [thirdNextCell SetStatusWithGraphCell:[GCells objectAtIndex:2] Animatation:CellAnimationTypeNone];
+    [thirdNextCell SetStatusWithGraphCell:[GCells objectAtIndex:2] Animatation:CellAnimationTypeNone];*/
 }
 -(void)setProgress:(CGFloat)progress withLevelNumber:(int)levelNo
 {
@@ -165,9 +169,12 @@
 {
     GraphCell *emptyCell = [[GraphCell alloc] init];
     emptyCell.color = unOccupied;
-    [FirstNextCell SetStatusWithGraphCell:emptyCell Animatation:CellAnimationTypeNone];
-    [SecondNextCell SetStatusWithGraphCell:emptyCell Animatation:CellAnimationTypeNone];
-    [thirdNextCell SetStatusWithGraphCell:emptyCell Animatation:CellAnimationTypeNone];
+    for(int i =0 ;i<MAX_NUMBER_OF_ADDED_CELLS;i++)
+    {
+        CellView *cell = ((CellView*)[self.view viewWithTag:4000+i]);
+        [cell SetStatusWithGraphCell:emptyCell Animatation:CellAnimationTypeNone];
+    }
+    
 }
 -(void)Quit
 {

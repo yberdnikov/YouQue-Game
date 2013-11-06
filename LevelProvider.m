@@ -60,9 +60,14 @@
     {
         [_delegate levelProvider:self LevelChanged:newLevel];
     }
+    _currentLevel = newLevel;
 }
 -(LevelEntity*)GetCurrentLevel
 {
     return _currentLevel;
+}
+-(BOOL)isFinalLevel
+{
+    return _currentLevel.MaxScore == -1;
 }
 @end

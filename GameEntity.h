@@ -12,5 +12,5 @@
 @interface GameEntity : NSObject<NSCoding,NSCopying>
 @property(nonatomic,retain)Graph *graph;
 @property(nonatomic,retain)ScoreEntity *score;
-@property(nonatomic,retain)NSArray *nextCellsToAdd;
+@property(nonatomic,retain)NSMutableArray *nextCellsToAdd;
 @end

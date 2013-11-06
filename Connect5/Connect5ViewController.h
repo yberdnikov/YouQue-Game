@@ -10,6 +10,7 @@
 #import "MatrixView.h"
 #import "SIAlertView.h"
 #import "SSPieProgressView.h"
+#define MAX_NUMBER_OF_ADDED_CELLS 5
 @interface Connect5ViewController : UIViewController<UIAlertViewDelegate,MatrixViewDelegate>
 {
     IBOutlet UIButton *okBtn;
@@ -17,9 +18,11 @@
     IBOutlet UILabel *ScoreBoard;
     IBOutlet UIButton *UndoBtn;
     IBOutlet UILabel *LevelLbl;
-    CellView *FirstNextCell;
+   /* CellView *FirstNextCell;
     CellView *SecondNextCell;
     CellView *thirdNextCell;
+    CellView *fourthNextCell;
+    CellView *fifthNextCell;*/
     IBOutlet SSPieProgressView *progressView;
 }
 @property(nonatomic,retain)GameEntity *ResumedGame;

@@ -646,11 +646,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MatrixView.m"
-            timestampString = "405386219.43543"
+            timestampString = "405444509.44467"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "657"
-            endingLineNumber = "657"
+            startingLineNumber = "702"
+            endingLineNumber = "702"
             landmarkName = "-RemoveCells:"
             landmarkType = "5">
             <Locations>
@@ -708,11 +708,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MatrixView.m"
-            timestampString = "405386024.377082"
+            timestampString = "405442741.166025"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "116"
-            endingLineNumber = "116"
+            startingLineNumber = "134"
+            endingLineNumber = "134"
             landmarkName = "-willMoveToSuperview:"
             landmarkType = "5">
          </BreakpointContent>
@@ -724,11 +724,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MatrixView.m"
-            timestampString = "405386024.377082"
+            timestampString = "405442741.166025"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "125"
-            endingLineNumber = "125"
+            startingLineNumber = "143"
+            endingLineNumber = "143"
             landmarkName = "-willMoveToSuperview:"
             landmarkType = "5">
          </BreakpointContent>
@@ -740,11 +740,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MatrixView.m"
-            timestampString = "405386219.43543"
+            timestampString = "405442741.166025"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "135"
-            endingLineNumber = "135"
+            startingLineNumber = "153"
+            endingLineNumber = "153"
             landmarkName = "-ReloadNewGame"
             landmarkType = "5">
          </BreakpointContent>
@@ -756,11 +756,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Connect5/Connect5ViewController.m"
-            timestampString = "405382765.80161"
+            timestampString = "405442741.166025"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "200"
-            endingLineNumber = "200"
+            startingLineNumber = "207"
+            endingLineNumber = "207"
             landmarkName = "-ReloadNewGame"
             landmarkType = "5">
          </BreakpointContent>
@@ -772,11 +772,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MatrixView.m"
-            timestampString = "405386219.43543"
+            timestampString = "405444509.44467"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "653"
-            endingLineNumber = "653"
+            startingLineNumber = "698"
+            endingLineNumber = "698"
             landmarkName = "-DetectAndRemoveConnectedCellsAndUpdateScoreWithCompetionBlock:withVerticesArray:"
             landmarkType = "5">
             <Locations>
@@ -818,11 +818,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MatrixView.m"
-            timestampString = "405386219.43543"
+            timestampString = "405442741.166025"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "468"
-            endingLineNumber = "468"
+            startingLineNumber = "512"
+            endingLineNumber = "512"
             landmarkName = "-CellViewTouched:"
             landmarkType = "5">
          </BreakpointContent>
@@ -946,11 +946,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MatrixView.m"
-            timestampString = "405386219.43543"
+            timestampString = "405444509.44467"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "675"
-            endingLineNumber = "675"
+            startingLineNumber = "720"
+            endingLineNumber = "720"
             landmarkName = "-SaveUndoAction"
             landmarkType = "5">
          </BreakpointContent>
@@ -978,11 +978,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MatrixView.m"
-            timestampString = "405386219.43543"
+            timestampString = "405442741.166025"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "554"
-            endingLineNumber = "554"
+            startingLineNumber = "598"
+            endingLineNumber = "598"
             landmarkName = "-OKAction:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1040,11 +1040,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MatrixView.m"
-            timestampString = "405386219.43543"
+            timestampString = "405442741.166025"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "565"
-            endingLineNumber = "565"
+            startingLineNumber = "609"
+            endingLineNumber = "609"
             landmarkName = "-MoveOccupiedCellFromIndex:toIndex:WithPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1478,11 +1478,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MatrixView.m"
-            timestampString = "405386219.43543"
+            timestampString = "405442741.166025"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "323"
-            endingLineNumber = "323"
+            startingLineNumber = "367"
+            endingLineNumber = "367"
             landmarkName = "-AddNewCells"
             landmarkType = "5">
          </BreakpointContent>
@@ -1494,11 +1494,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MatrixView.m"
-            timestampString = "405386024.377082"
+            timestampString = "405442741.166025"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "120"
-            endingLineNumber = "120"
+            startingLineNumber = "138"
+            endingLineNumber = "138"
             landmarkName = "-willMoveToSuperview:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1510,11 +1510,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MatrixView.m"
-            timestampString = "405386219.43543"
+            timestampString = "405442741.166025"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "325"
-            endingLineNumber = "325"
+            startingLineNumber = "369"
+            endingLineNumber = "369"
             landmarkName = "-AddNewCells"
             landmarkType = "5">
          </BreakpointContent>
@@ -1526,11 +1526,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MatrixView.m"
-            timestampString = "405386219.43543"
+            timestampString = "405442741.166025"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "282"
-            endingLineNumber = "282"
+            startingLineNumber = "325"
+            endingLineNumber = "325"
             landmarkName = "-GenerateRandomCellsAndAddToSuperView:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1542,11 +1542,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MatrixView.m"
-            timestampString = "405386219.43543"
+            timestampString = "405442741.166025"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "258"
-            endingLineNumber = "258"
+            startingLineNumber = "276"
+            endingLineNumber = "276"
             landmarkName = "-showBannerWithMessage:withTitle:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1558,11 +1558,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MatrixView.m"
-            timestampString = "405386024.377082"
+            timestampString = "405442741.166025"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "118"
-            endingLineNumber = "118"
+            startingLineNumber = "136"
+            endingLineNumber = "136"
             landmarkName = "-willMoveToSuperview:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1574,11 +1574,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MatrixView.m"
-            timestampString = "405386024.377082"
+            timestampString = "405442741.166025"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "123"
-            endingLineNumber = "123"
+            startingLineNumber = "141"
+            endingLineNumber = "141"
             landmarkName = "-willMoveToSuperview:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1590,11 +1590,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MatrixView.m"
-            timestampString = "405386024.377082"
+            timestampString = "405442741.166025"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "80"
-            endingLineNumber = "80"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
             landmarkName = "-saveGame"
             landmarkType = "5">
          </BreakpointContent>
@@ -1702,11 +1702,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MatrixView.m"
-            timestampString = "405386219.43543"
+            timestampString = "405442741.166025"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "205"
-            endingLineNumber = "205"
+            startingLineNumber = "223"
+            endingLineNumber = "223"
             landmarkName = "-LoadWithCellsGameResumed:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1718,28 +1718,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MatrixView.m"
-            timestampString = "405386219.43543"
+            timestampString = "405442741.166025"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "224"
-            endingLineNumber = "224"
+            startingLineNumber = "242"
+            endingLineNumber = "242"
             landmarkName = "-LoadWithCellsGameResumed:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Connect5/Connect5ViewController.m"
-            timestampString = "404420128.562058"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
-            landmarkName = "-viewDidLoad"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1958,11 +1942,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Connect5/Connect5ViewController.m"
-            timestampString = "405382765.80161"
+            timestampString = "405442741.166025"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "213"
-            endingLineNumber = "213"
+            startingLineNumber = "220"
+            endingLineNumber = "220"
             landmarkName = "-UndoAction:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1974,11 +1958,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MatrixView.m"
-            timestampString = "405386024.377082"
+            timestampString = "405442741.166025"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "102"
-            endingLineNumber = "102"
+            startingLineNumber = "120"
+            endingLineNumber = "120"
             landmarkName = "-undoLastMove"
             landmarkType = "5">
          </BreakpointContent>
@@ -2022,11 +2006,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MatrixView.m"
-            timestampString = "405386219.43543"
+            timestampString = "405442741.166025"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "145"
-            endingLineNumber = "145"
+            startingLineNumber = "163"
+            endingLineNumber = "163"
             landmarkName = "-ReloadGame:"
             landmarkType = "5">
          </BreakpointContent>
@@ -2146,11 +2130,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MatrixView.m"
-            timestampString = "405386024.377082"
+            timestampString = "405442741.166025"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "79"
-            endingLineNumber = "79"
+            startingLineNumber = "97"
+            endingLineNumber = "97"
             landmarkName = "-saveGame"
             landmarkType = "5">
          </BreakpointContent>
@@ -2162,11 +2146,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Connect5/Connect5ViewController.m"
-            timestampString = "405382765.80161"
+            timestampString = "405442741.166025"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "203"
-            endingLineNumber = "203"
+            startingLineNumber = "210"
+            endingLineNumber = "210"
             landmarkName = "-ReloadNewGame"
             landmarkType = "5">
          </BreakpointContent>
@@ -2178,11 +2162,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MatrixView.m"
-            timestampString = "405386219.43543"
+            timestampString = "405444509.44467"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "664"
-            endingLineNumber = "664"
+            startingLineNumber = "709"
+            endingLineNumber = "709"
             landmarkName = "-RemoveCells:"
             landmarkType = "5">
          </BreakpointContent>
@@ -2194,11 +2178,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MatrixView.m"
-            timestampString = "405386219.43543"
+            timestampString = "405444509.44467"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "666"
-            endingLineNumber = "666"
+            startingLineNumber = "711"
+            endingLineNumber = "711"
             landmarkName = "-RemoveCells:"
             landmarkType = "5">
          </BreakpointContent>
@@ -2210,11 +2194,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MatrixView.m"
-            timestampString = "405386219.43543"
+            timestampString = "405442741.166025"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "406"
-            endingLineNumber = "406"
+            startingLineNumber = "450"
+            endingLineNumber = "450"
             landmarkName = "-CellViewTouched:"
             landmarkType = "5">
          </BreakpointContent>
@@ -2226,11 +2210,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MatrixView.m"
-            timestampString = "405386219.43543"
+            timestampString = "405444509.44467"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "717"
-            endingLineNumber = "717"
+            startingLineNumber = "767"
+            endingLineNumber = "767"
             landmarkName = "-AnimatePath:withColor:withCompletionBlock:"
             landmarkType = "5">
          </BreakpointContent>
@@ -2258,11 +2242,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MatrixView.m"
-            timestampString = "405386219.43543"
+            timestampString = "405444509.44467"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "707"
-            endingLineNumber = "707"
+            startingLineNumber = "757"
+            endingLineNumber = "757"
             landmarkName = "-UpdateScore"
             landmarkType = "5">
          </BreakpointContent>
@@ -2274,11 +2258,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Connect5/Connect5ViewController.m"
-            timestampString = "405382003.239596"
+            timestampString = "405442741.166025"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "117"
-            endingLineNumber = "117"
+            startingLineNumber = "121"
+            endingLineNumber = "121"
             landmarkName = "-setProgress:withLevelNumber:"
             landmarkType = "5">
          </BreakpointContent>
@@ -2290,11 +2274,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MatrixView.m"
-            timestampString = "405386008.596413"
+            timestampString = "405442741.166025"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "73"
-            endingLineNumber = "73"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
             landmarkName = "-levelProvider:LevelChanged:"
             landmarkType = "5">
          </BreakpointContent>
@@ -2327,6 +2311,38 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "52"
             endingLineNumber = "52"
+            landmarkName = "-ReportScore:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LevelProvider.m"
+            timestampString = "405443036.169066"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "-ReportScore:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LevelProvider.m"
+            timestampString = "405443037.673072"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
             landmarkName = "-ReportScore:"
             landmarkType = "5">
          </BreakpointContent>

@@ -49,10 +49,10 @@
             
             currentGame.graph = graph;
             currentGame.score = Score;
-            currentGame.nextCellsToAdd = [NSArray array];
+            currentGame.nextCellsToAdd = [NSMutableArray array];
         }
         
-        levelProvider = [[LevelProvider alloc] initWithNumberOfLevels:2];
+        levelProvider = [[LevelProvider alloc] initWithNumberOfLevels:3];
         levelProvider.delegate = self;
         
         self.SelectedPath = [NSMutableArray array];
@@ -68,8 +68,26 @@
     }
     return self;
 }
--(void)levelProvider:(LevelProvider *)levelProvider LevelChanged:(LevelEntity *)newLevel
+-(void)levelProvider:(LevelProvider *)lvlProvider LevelChanged:(LevelEntity *)newLevel
 {
+    if(newLevel == [lvlProvider GetCurrentLevel])
+    {
+        return;
+    }
+    
+    
+    for(int i=0 ;i<newLevel.numberOfAddedCells;i++)
+    {
+        if(i>=currentGame.nextCellsToAdd.count)
+        {
+            GraphCell *Gcell = [[GraphCell alloc] init];
+            Gcell.color = [self getRandomColor];
+            [currentGame.nextCellsToAdd addObject:Gcell];
+        }
+    }
+    
+    [self AddNextCellsToSuperView];
+    
     
 }
 -(void)saveGame
@@ -133,7 +151,7 @@
     _UndoBtn.enabled = NO;
     [currentGame.score ResetScore];
     [currentGame.graph ResetGraph];
-    self.ScoreBoard.text = [NSString stringWithFormat:@"%d",0];
+    [self UpdateScore];
     [self ReloadWithSize:currentGame.graph.size gameResumed:NO];
 }
 -(void)ReloadGame:(GameEntity*)game
@@ -259,16 +277,41 @@
                                 subtitle:msg
                                     type:TSMessageNotificationTypeError];
 }
+-(GraphCellStatus)getRandomColor
+{
+    int randomIndex = arc4random_uniform(5);
+    
+    if(randomIndex==0)
+    {
+        return blue;
+        
+    }else if (randomIndex==1)
+    {
+        return green;
+        
+    }else if (randomIndex==2)
+    {
+        return red;
+        
+    }else if (randomIndex==3)
+    {
+        return yellow;
+        
+    }else //if (randomIndex==4)
+    {
+        return orange;
+    }
+}
 -(void)GenerateRandomCellsAndAddToSuperView:(BOOL)addToSuperView
 {
     
     NSMutableArray *addedCells = [NSMutableArray array];
-    for(int i=0 ;i<NUMBER_OF_ADDED_CELLS;i++)
+    for(int i=0 ;i<[levelProvider GetCurrentLevel].numberOfAddedCells;i++)
     {
         GraphCell *CopyGCell = [[GraphCell alloc] init];
         [addedCells addObject:CopyGCell];
         
-        int randomIndex = arc4random_uniform(5);
+       /* int randomIndex = arc4random_uniform(5);
         
         if(randomIndex==0)
         {
@@ -289,7 +332,8 @@
         }else if (randomIndex==4)
         {
             CopyGCell.color = orange;
-        }
+        }*/
+        CopyGCell.color = [self getRandomColor];
         
         
     }
@@ -315,18 +359,18 @@
     
    
     
-    if(unoccupiedCells.count<3)
+    if(unoccupiedCells.count<[levelProvider GetCurrentLevel].numberOfAddedCells)
     {
         [self GameOver];
         return;
     }
     
     
-    [RandomUnOccupiedCellsGenerator GenerateRandomUnOccupiedCellsIndexes:NUMBER_OF_ADDED_CELLS WithUnOccupiedCells:unoccupiedCells withCompletionBlock:^(NSArray* result){
+    [RandomUnOccupiedCellsGenerator GenerateRandomUnOccupiedCellsIndexes:[levelProvider GetCurrentLevel].numberOfAddedCells WithUnOccupiedCells:unoccupiedCells withCompletionBlock:^(NSArray* result){
     
     
         NSMutableArray *AddedCells = [NSMutableArray array];
-        for(int i=0 ;i<NUMBER_OF_ADDED_CELLS;i++)
+        for(int i=0 ;i<[levelProvider GetCurrentLevel].numberOfAddedCells;i++)
         {
             GraphCell *AddedGCell = [currentGame.nextCellsToAdd objectAtIndex:i];
             GraphCell *LocalGCell = [currentGame.graph getGraphCellWithIndex:((NSNumber*)[result objectAtIndex:i]).intValue];
@@ -336,7 +380,7 @@
             [AddedCells addObject:LocalGCell];
             [LocalCell SetStatusWithGraphCell:LocalGCell Animatation:CellAnimationTypeAdded withDelay:i withCompletionBlock:^(BOOL finished){
             
-                int numberOfAddedCells = NUMBER_OF_ADDED_CELLS;
+                int numberOfAddedCells = [levelProvider GetCurrentLevel].numberOfAddedCells ;
                 if(i==numberOfAddedCells-1)
                 {
                     
@@ -617,11 +661,8 @@
                              type:SIAlertViewButtonTypeDefault
                           handler:^(SIAlertView *alert) {
                               
-                              [self ResetUndo];
-                               [currentGame.score ResetScore];
-                              [self SetScoreInScoreBoard:currentGame.score.score];
-                              [currentGame.graph ResetGraph];
-                              [self ReloadWithSize:currentGame.graph.size gameResumed:NO];
+                              [self ReloadNewGame];
+                              
                           }];
     
     alertView.transitionStyle = SIAlertViewTransitionStyleFade;
@@ -703,8 +744,13 @@
     [self SetScoreInScoreBoard:currentGame.score.score];
     if([_delegate respondsToSelector:@selector(setProgress:withLevelNumber:)])
     {
-        CGFloat progress = currentGame.score.score/1000.0f;
-        [_delegate setProgress:progress withLevelNumber:1];
+        CGFloat Mod = currentGame.score.score % (int)(LEVEL_RANGE);
+        CGFloat progress = (CGFloat)(Mod/LEVEL_RANGE);
+        if([levelProvider isFinalLevel])
+        {
+            progress = 1.0f;
+        }
+        [_delegate setProgress:progress withLevelNumber:floorf(currentGame.score.score/LEVEL_RANGE)+1];
     }
 }
 -(CellView*)getCellViewWithIndex:(int)index
