@@ -18,11 +18,6 @@
     IBOutlet UILabel *ScoreBoard;
     IBOutlet UIButton *UndoBtn;
     IBOutlet UILabel *LevelLbl;
-   /* CellView *FirstNextCell;
-    CellView *SecondNextCell;
-    CellView *thirdNextCell;
-    CellView *fourthNextCell;
-    CellView *fifthNextCell;*/
     IBOutlet SSPieProgressView *progressView;
 }
 @property(nonatomic,retain)GameEntity *ResumedGame;

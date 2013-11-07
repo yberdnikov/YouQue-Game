@@ -146,6 +146,10 @@
 
 -(void)ReloadNewGame
 {
+    if([_delegate respondsToSelector:@selector(ResetNextAddedCells)])
+    {
+        [_delegate ResetNextAddedCells];
+    }
     [levelProvider ResetLevel];
     [_UndoManager ResetManager];
     _UndoBtn.enabled = NO;
@@ -258,7 +262,7 @@
         [self performSelector:@selector(AddNewCells) withObject:nil afterDelay:0.5];
     }else
     {
-        [self AddNextCellsToSuperView];
+        //[self AddNextCellsToSuperView];
     }
     
     
@@ -750,7 +754,7 @@
         {
             progress = 1.0f;
         }
-        [_delegate setProgress:progress withLevelNumber:floorf(currentGame.score.score/LEVEL_RANGE)+1];
+        [_delegate setProgress:progress withLevelNumber:[levelProvider GetCurrentLevel].LevelIndex];
     }
 }
 -(CellView*)getCellViewWithIndex:(int)index

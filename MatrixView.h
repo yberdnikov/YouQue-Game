@@ -68,4 +68,5 @@ typedef void(^UndoBlock)(NSArray* lastAddedCells,NSArray *lastRemovedCells,NSNum
 -(void)MatrixViewQuit:(MatrixView*)matrixView;
 -(void)AddNextCellsWithGraphCells:(NSArray*)GCells;
 -(void)setProgress:(CGFloat)progress withLevelNumber:(int)levelNo;
+-(void)ResetNextAddedCells;
 @end

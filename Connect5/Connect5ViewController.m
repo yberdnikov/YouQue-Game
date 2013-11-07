@@ -165,6 +165,10 @@
             break;
     }
 }
+-(void)ResetNextAddedCells
+{
+    [self ResetNextCells];
+}
 -(void)ResetNextCells
 {
     GraphCell *emptyCell = [[GraphCell alloc] init];
