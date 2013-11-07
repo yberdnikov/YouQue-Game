@@ -239,7 +239,7 @@
 -(void)animateCellWithColor:(UIImage*)Color withDelay:(NSTimeInterval)delay withCompletionBlock:(CellAnimationCompletionBlock)completionBlock
 {
     contentView.alpha = 0.0;
-    [UIView animateWithDuration:0.15 delay:delay*0.15 options:UIViewAnimationOptionCurveEaseInOut animations:^(void){
+    [UIView animateWithDuration:0.2 delay:delay*0.2 options:UIViewAnimationOptionCurveEaseInOut animations:^(void){
         
         contentView.image  = Color;
         

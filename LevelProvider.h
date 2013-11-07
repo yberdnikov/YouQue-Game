@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "LevelEntity.h"
-#define LEVEL_RANGE 10.0f
+#define LEVEL_RANGE 100.0f
 @protocol LevelProviderDelegate;
 @interface LevelProvider : NSObject
 
