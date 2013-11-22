@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		6E0A1AA01816FC610097486A /* MYIntroductionPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E0A1A9D1816FC610097486A /* MYIntroductionPanel.m */; };
 		6E0A1AA11816FC610097486A /* MYIntroductionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E0A1A9F1816FC610097486A /* MYIntroductionView.m */; };
+		6E0FAA8A1835006E00D30956 /* Button_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E0FAA891835006E00D30956 /* Button_background.png */; };
+		6E0FAA8C183501F800D30956 /* dark-grey-background-texture.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E0FAA8B183501F800D30956 /* dark-grey-background-texture.png */; };
 		6E15D93917735813009DC20F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E15D93817735813009DC20F /* UIKit.framework */; };
 		6E15D93B17735813009DC20F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E15D93A17735813009DC20F /* Foundation.framework */; };
 		6E15D93D17735813009DC20F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E15D93C17735813009DC20F /* CoreGraphics.framework */; };
@@ -85,6 +87,8 @@
 		6E7156B0180575EF00C5CCB7 /* PersistentStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E7156AF180575EF00C5CCB7 /* PersistentStore.m */; };
 		6E7156B41805761600C5CCB7 /* GameEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E7156B31805761600C5CCB7 /* GameEntity.m */; };
 		6E7FD1351813CF92004EDD86 /* ScoreEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E7FD1341813CF92004EDD86 /* ScoreEntity.m */; };
+		6E8CCFD41830C06700D0CCFE /* tut.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E8CCFD31830C06700D0CCFE /* tut.png */; };
+		6E8CCFD61830C65F00D0CCFE /* UndoTut.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E8CCFD51830C65F00D0CCFE /* UndoTut.png */; };
 		6E8EDBFE1829AD65002CB466 /* LevelProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E8EDBFD1829AD65002CB466 /* LevelProvider.m */; };
 		6E8EDC021829ADA3002CB466 /* LevelEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E8EDC011829ADA3002CB466 /* LevelEntity.m */; };
 		6E8EDC061829B035002CB466 /* LevelGauge.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E8EDC051829B035002CB466 /* LevelGauge.m */; };
@@ -106,6 +110,8 @@
 		6E0A1A9D1816FC610097486A /* MYIntroductionPanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYIntroductionPanel.m; sourceTree = "<group>"; };
 		6E0A1A9E1816FC610097486A /* MYIntroductionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYIntroductionView.h; sourceTree = "<group>"; };
 		6E0A1A9F1816FC610097486A /* MYIntroductionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYIntroductionView.m; sourceTree = "<group>"; };
+		6E0FAA891835006E00D30956 /* Button_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Button_background.png; sourceTree = "<group>"; };
+		6E0FAA8B183501F800D30956 /* dark-grey-background-texture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dark-grey-background-texture.png"; sourceTree = "<group>"; };
 		6E15D93517735813009DC20F /* YouQue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YouQue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E15D93817735813009DC20F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		6E15D93A17735813009DC20F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -209,6 +215,8 @@
 		6E7156B31805761600C5CCB7 /* GameEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameEntity.m; sourceTree = "<group>"; };
 		6E7FD1331813CF92004EDD86 /* ScoreEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScoreEntity.h; sourceTree = "<group>"; };
 		6E7FD1341813CF92004EDD86 /* ScoreEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScoreEntity.m; sourceTree = "<group>"; };
+		6E8CCFD31830C06700D0CCFE /* tut.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tut.png; sourceTree = "<group>"; };
+		6E8CCFD51830C65F00D0CCFE /* UndoTut.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UndoTut.png; sourceTree = "<group>"; };
 		6E8EDBFC1829AD65002CB466 /* LevelProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelProvider.h; sourceTree = "<group>"; };
 		6E8EDBFD1829AD65002CB466 /* LevelProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelProvider.m; sourceTree = "<group>"; };
 		6E8EDC001829ADA3002CB466 /* LevelEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelEntity.h; sourceTree = "<group>"; };
@@ -650,6 +658,7 @@
 		6E9745BC1817FE9400EF34A4 /* How to play images */ = {
 			isa = PBXGroup;
 			children = (
+				6E8CCFD31830C06700D0CCFE /* tut.png */,
 				6E9745C11818088D00EF34A4 /* new cells.png */,
 				6E9745BF1818044000EF34A4 /* selection.png */,
 				6E9745BD1817FF1000EF34A4 /* objective.png */,
@@ -700,6 +709,9 @@
 		6EFAA99F1808DD12000A30BE /* UX images */ = {
 			isa = PBXGroup;
 			children = (
+				6E0FAA8B183501F800D30956 /* dark-grey-background-texture.png */,
+				6E0FAA891835006E00D30956 /* Button_background.png */,
+				6E8CCFD51830C65F00D0CCFE /* UndoTut.png */,
 				6E6F1897181AF21F0076F314 /* grayNavBar.png */,
 				6E548D71181AC48100128B21 /* undo.png */,
 				6E548D6F181AC44C00128B21 /* player_pause.png */,
@@ -780,6 +792,7 @@
 				6E548D70181AC44C00128B21 /* player_pause.png in Resources */,
 				6E1E3DEC180AF54800903B3C /* icon_40.png in Resources */,
 				6E6BC86718099F9700A3303A /* Background3.jpeg in Resources */,
+				6E8CCFD41830C06700D0CCFE /* tut.png in Resources */,
 				6E47604C18183AB500DD79A2 /* NotificationButtonBackground@2x.png in Resources */,
 				6E548D6E181AC3FC00128B21 /* media_playback_pause.png in Resources */,
 				6EFAA9A51808DD30000A30BE /* circle_blue.png in Resources */,
@@ -792,11 +805,13 @@
 				6E1E3DF5180AF54800903B3C /* icon_144.png in Resources */,
 				6E47604B18183AB500DD79A2 /* NotificationButtonBackground.png in Resources */,
 				6E47604118183AB500DD79A2 /* NotificationBackgroundMessage.png in Resources */,
+				6E8CCFD61830C65F00D0CCFE /* UndoTut.png in Resources */,
 				6E47604218183AB500DD79A2 /* NotificationBackgroundMessage@2x.png in Resources */,
 				6E1E3DF6180AF54800903B3C /* icon_512.png in Resources */,
 				6E47603F18183AB500DD79A2 /* NotificationBackgroundErrorIcon.png in Resources */,
 				6E1E3DF4180AF54800903B3C /* icon_120.png in Resources */,
 				6E1E3DED180AF54800903B3C /* icon_50.png in Resources */,
+				6E0FAA8A1835006E00D30956 /* Button_background.png in Resources */,
 				6E47604518183AB500DD79A2 /* NotificationBackgroundSuccessIcon.png in Resources */,
 				6E1E3DF1180AF54800903B3C /* icon_72.png in Resources */,
 				6E15D95817735813009DC20F /* Connect5ViewController_iPad.xib in Resources */,
@@ -819,6 +834,7 @@
 				6E1E3DEE180AF54800903B3C /* icon_57.png in Resources */,
 				6E9745BE1817FF1000EF34A4 /* objective.png in Resources */,
 				6E1E3DF2180AF54800903B3C /* icon_80.png in Resources */,
+				6E0FAA8C183501F800D30956 /* dark-grey-background-texture.png in Resources */,
 				6E9745C21818088E00EF34A4 /* new cells.png in Resources */,
 				6E65D53A1809A7820020E35D /* black-background-metal-texture-16001200-abstract-hd.jpg in Resources */,
 				6E9745C01818044000EF34A4 /* selection.png in Resources */,

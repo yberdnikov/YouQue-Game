@@ -10,6 +10,7 @@
 #import "MatrixView.h"
 #import "SIAlertView.h"
 #import "SSPieProgressView.h"
+
 #define MAX_NUMBER_OF_ADDED_CELLS 5
 @interface Connect5ViewController : UIViewController<UIAlertViewDelegate,MatrixViewDelegate>
 {

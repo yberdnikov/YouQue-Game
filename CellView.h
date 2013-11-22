@@ -13,7 +13,7 @@
 #define RIGHT_IMAGE_NAME @"SQUARE2.png"
 #define WRONG_IMAGE_NAME @"WRONG TOUCH.png"
 #define SQUARE_IMAGE @"SQUARE WHITE UNPRESSED.png"
-#define CELL_SIZE ((([[UIDevice currentDevice] userInterfaceIdiom]) == (UIUserInterfaceIdiomPhone)) ? (44) : (60))
+#define CELL_SIZE ((([[UIDevice currentDevice] userInterfaceIdiom]) == (UIUserInterfaceIdiomPhone)) ? (42.5) : (60))
 @protocol CellViewDelegate;
 typedef void (^CellAnimationCompletionBlock)(BOOL finished);
 typedef enum
@@ -32,6 +32,7 @@ typedef enum
 @property(nonatomic)BOOL IsOccupied;
 @property(nonatomic)BOOL SetTouchable;
 
+
 //Notify the Cell that it has been touched to glow
 -(void)cellTouchedWithStatus:(GraphCellStatus)status;
 -(void)cellUnTouched;
@@ -42,6 +43,7 @@ typedef enum
 
 -(void)setPathtTraceImageWithStatus:(GraphCellStatus)color;
 -(void)RemovePathTraceImage;
+-(UIColor*)getColorWithStatus:(GraphCellStatus)status;
 @end
 @protocol CellViewDelegate <NSObject>
 -(void)CellViewTouched:(CellView*)cellView;

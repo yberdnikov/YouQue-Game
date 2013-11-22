@@ -29,7 +29,8 @@
         _UndoManager = [[UndoManager alloc] init];
         // Initialization View Local Variables And Load Cells
         self.backgroundColor = [UIColor colorWithRed:(57.0f/255.0f) green:(57.0f/255.0f) blue:(57.0f/255.0f) alpha:1.0];
-        
+        self.layer.borderColor = [UIColor lightGrayColor].CGColor;
+        self.layer.borderWidth = 3;
         self.layer.cornerRadius = 10.0;
         
         IsGameResumed = resumed;
@@ -205,8 +206,8 @@
     CGFloat AnimationDelay =0.0;
     int CurrentX = CELL_SIZE;
     CurrentX *= -1;
-    CurrentX += 10;
-    int CurrentY = 10;
+    CurrentX += 5;
+    int CurrentY = 5;
     for(int i =0 ;i<TotalCellsCount;i++)
     {
         if((i/currentGame.graph.size.height)*currentGame.graph.size.height != i)
@@ -215,7 +216,7 @@
             //increase Y
             
             
-            CurrentY+=CELL_SIZE;
+            CurrentY+=CELL_SIZE+2;
             
             
         }else
@@ -224,14 +225,14 @@
             //Reset Y and increase X
             
             
-            CurrentY = 10;
-            CurrentX+=CELL_SIZE;
+            CurrentY = 5;
+            CurrentX+=CELL_SIZE+2;
         }
         
         
         
         
-        CellView *cell = [[CellView alloc] initWithFrame:CGRectMake(CurrentX, CurrentY, 0.0, 0.0)];
+        CellView *cell = [[CellView alloc] initWithFrame:CGRectMake(CurrentX, CurrentY, CELL_SIZE, CELL_SIZE)];
         cell.tag = i+1000;
         cell.delegate = self;
         
@@ -262,7 +263,7 @@
         [self performSelector:@selector(AddNewCells) withObject:nil afterDelay:0.5];
     }else
     {
-        //[self AddNextCellsToSuperView];
+        [self AddNextCellsToSuperView];
     }
     
     

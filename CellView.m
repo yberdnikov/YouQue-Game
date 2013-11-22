@@ -12,7 +12,7 @@
 
 - (id)initWithFrame:(CGRect)frame
 {
-    frame = CGRectMake(frame.origin.x, frame.origin.y, CELL_SIZE-0.5, CELL_SIZE-0.5);
+    //frame = CGRectMake(frame.origin.x, frame.origin.y, CELL_SIZE-0.5, CELL_SIZE-0.5);
     self = [super initWithFrame:frame];
     if (self) {
         
@@ -24,13 +24,12 @@
         self.frame = frame;
         self.backgroundColor = [UIColor lightGrayColor];
         contentView.backgroundColor = [UIColor clearColor];
-        contentView.layer.cornerRadius = CELL_SIZE/2;
-        self.layer.cornerRadius = CELL_SIZE/2;
+        contentView.layer.cornerRadius = frame.size.width/2;
+        self.layer.cornerRadius = frame.size.width/2;
         self.IsOccupied = NO;
         self.SetTouchable = YES;
         
-        //self.layer.borderColor = [UIColor grayColor].CGColor;
-        //self.layer.borderWidth = 0.5;
+        
         
         UITapGestureRecognizer *TapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(HandleTap:)];
         TapGesture.delegate = self;
@@ -38,7 +37,7 @@
         
         TapGesture = nil;
         
-       // [self addInnerShadowToView];
+       
         
     }
     return self;

@@ -67,11 +67,18 @@
 }
 -(void)GameCenterAction:(id)sender
 {
-    GKGameCenterViewController *gameCenterController = [[GKGameCenterViewController alloc] init];
-    if (gameCenterController != nil)
+    if((floorf([[UIDevice currentDevice] systemVersion].floatValue))>=6)
     {
-        gameCenterController.gameCenterDelegate = self;
-        [self presentViewController: gameCenterController animated: YES completion:nil];
+        GKGameCenterViewController *gameCenterController = [[GKGameCenterViewController alloc] init];
+        if (gameCenterController != nil)
+        {
+            gameCenterController.gameCenterDelegate = self;
+            [self presentViewController: gameCenterController animated: YES completion:nil];
+        }
+    }else
+    {
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"gamecenter:"]];
+        
     }
 }
 -(void)ResumeGame:(id)sender
@@ -100,6 +107,10 @@
 {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+-(void)leaderboardViewControllerDidFinish:(GKLeaderboardViewController *)viewController
+{
+    [self dismissModalViewControllerAnimated:YES];
+}
 -(void)HowToplay:(id)sender
 {
     if(!panels)
@@ -115,11 +126,14 @@
 {
     panels = [NSMutableArray array];
     MYIntroductionPanel *ObjectivePanel = [[MYIntroductionPanel alloc] initWithimage:[UIImage imageNamed:@"objective.png"] description:@"The objective is to collect rows of 4 or more cells with the same colour either vertically ,horizontally ,or diagonally to gain points."];
-    MYIntroductionPanel *panel2 = [[MYIntroductionPanel alloc] initWithimage:[UIImage imageNamed:@"selection.png"] description:@"To move a coloured cell around ,first select it ,Then select another unoccupied place so that it moves there ."];
-    MYIntroductionPanel *panel3 = [[MYIntroductionPanel alloc] initWithimage:[UIImage imageNamed:@"new cells.png"] description:@"Every time you move a cell , three new cells are added ,And the three cells to be added next are shown at the bottom, Except when your move completes rows of 4 or more cells of same colour, no new cells are added ."];
+    MYIntroductionPanel *panel2 = [[MYIntroductionPanel alloc] initWithimage:[UIImage imageNamed:@"selection.png"] description:@"To move a coloured cell around ,first select it so that you see it glowing,Then select another unoccupied place so that it moves there ."];
+    MYIntroductionPanel *panel3 = [[MYIntroductionPanel alloc] initWithimage:[UIImage imageNamed:@"tut.png"] description:@"Every time you move a cell , new cells are added ,And the cells to be added next are shown at the top, Except when your move completes rows of 4 or more cells of same colour, no new cells are added ."];
+    
+    MYIntroductionPanel *panel4 = [[MYIntroductionPanel alloc] initWithimage:[UIImage imageNamed:@"UndoTut.png"] description:@"You can undo any move by pressing the undo button on the top right corner ."];
     [panels addObject:ObjectivePanel];
     [panels addObject:panel2];
     [panels addObject:panel3];
+    [panels addObject:panel4];
     
 }
 -(void)introductionDidFinishWithType:(MYFinishType)finishType

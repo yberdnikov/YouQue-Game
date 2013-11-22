@@ -10,7 +10,7 @@
 #import "Connect5ViewController.h"
 #import <GameKit/GameKit.h>
 #import "MYIntroductionView.h"
-@interface MainMenuViewController : UIViewController<GKGameCenterControllerDelegate,MYIntroductionDelegate>
+@interface MainMenuViewController : UIViewController<GKGameCenterControllerDelegate,GKLeaderboardViewControllerDelegate,MYIntroductionDelegate>
 {
     Connect5ViewController *GameView;
     IBOutlet UIButton *ResumBtn;

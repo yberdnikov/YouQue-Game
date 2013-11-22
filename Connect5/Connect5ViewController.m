@@ -53,14 +53,14 @@
     int padding = 2;
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone)
     {
-        y = -10;
+        y = 0;
         xOffset = -15;
     }
-    int cellSize = CELL_SIZE;
+    int cellSize = 32;
     
     for(int i = 0;i<MAX_NUMBER_OF_ADDED_CELLS;i++)
     {
-        CellView *cell = [[CellView alloc] initWithFrame:CGRectMake(20+i*(cellSize+padding)+xOffset, y , 0, 0)];
+        CellView *cell = [[CellView alloc] initWithFrame:CGRectMake(20+i*(cellSize+padding)+xOffset, y , cellSize, cellSize)];
         cell.tag = 4000+i;
         [gameContainerView addSubview:cell];
     }
@@ -79,10 +79,10 @@
     
     
 
-    progressView.pieFillColor = [UIColor colorWithRed:(57.0f/255.0f) green:(57.0f/255.0f) blue:(57.0f/255.0f) alpha:1.0];
+    progressView.pieFillColor = [UIColor colorWithRed:(37.0f/255.0f) green:(37.0f/255.0f) blue:(37.0f/255.0f) alpha:1.0];
     progressView.pieBorderColor = [UIColor whiteColor];
-    progressView.pieBackgroundColor = [UIColor colorWithRed:(157.0f/255.0f) green:(157.0f/255.0f) blue:(157.0f/255.0f) alpha:1.0];
-    //[progressView setProgress:0.6];
+    progressView.pieBackgroundColor = [UIColor lightGrayColor];//[UIColor colorWithRed:(182.0f/255.0f) green:(195.0f/255.0f) blue:(214.0f/255.0f) alpha:1.0];
+   // [progressView setProgress:0.6];
     
     //LevelLbl.text = @"Level 1";
     
@@ -98,6 +98,9 @@
 }
 -(void)AddNextCellsWithGraphCells:(NSArray *)GCells
 {
+    
+    
+    
     for(int i =0 ;i<MAX_NUMBER_OF_ADDED_CELLS;i++)
     {
         CellView *cell = ((CellView*)[self.view viewWithTag:4000+i]);
@@ -111,9 +114,7 @@
             [cell SetStatusWithGraphCell:emptyCell Animatation:CellAnimationTypeNone];
         }
     }
-    /*[FirstNextCell SetStatusWithGraphCell:[GCells objectAtIndex:0] Animatation:CellAnimationTypeNone];
-    [SecondNextCell SetStatusWithGraphCell:[GCells objectAtIndex:1] Animatation:CellAnimationTypeNone];
-    [thirdNextCell SetStatusWithGraphCell:[GCells objectAtIndex:2] Animatation:CellAnimationTypeNone];*/
+    
 }
 -(void)setProgress:(CGFloat)progress withLevelNumber:(int)levelNo
 {
